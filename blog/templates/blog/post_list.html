@@ -2,6 +2,8 @@
   <head>
     <meta charset="UTF-8">
     <title>Ordinary blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
   </head>
   <body>
     <div>
@@ -11,7 +13,7 @@
     {% for post in posts %}
       <div>
         <p><em>published: {{ post.published_date|date:"H:i d M Y" }}</em></p>
-        <h1><a href="">{{ post.title }}</a></h1>
+        <h2><a href="">{{ post.title }}</a></h2>
         <p>{{ post.text|linebreaks }}</p>
       </div>
     {% endfor %}
